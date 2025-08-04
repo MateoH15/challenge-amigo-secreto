@@ -23,7 +23,12 @@ function agregarAmigo() {
   listaAmigos.innerHTML = "";
   amigos.push(inputText.value);
   for (let i = 0; i < amigos.length; i++) {
-    listaAmigos.innerHTML += `<li>${inputText.value}</li>`;
+    listaAmigos.innerHTML += `<li>${amigos[i]}</li>`;
     inputText.value = "";
   }
+}
+
+function sortearAmigo() {
+  const numeroRandom = Math.floor(Math.random() * amigos.length + 1) - 1;
+  resultado.innerHTML = `<li>${amigos[numeroRandom]}</li>`;
 }
