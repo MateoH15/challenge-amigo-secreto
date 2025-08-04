@@ -7,8 +7,9 @@ const resultado = document.getElementById("resultado");
 let amigos = [];
 
 function agregarAmigo() {
-  if (inputText.value === "") {
+  if (inputText.value === "" || Number(inputText.value)) {
     alert("Ingrese un nombre válido");
+    inputText.value = "";
     return;
   }
 
